@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header>
-		<div class="inner-wrapper">
+		<div class="inner-wrapper" id="home">
 			<!-- logo -->
 			<div class="topnav">
 				<div class="logo">
@@ -21,70 +21,17 @@
 				</div>
 				<!-- nav1 -->
 				<nav> 
-					<div class="fa fa-bars fa-2x"></div>
+					<!-- <div class="fa fa-bars fa-2x"></div> -->
 					<ul class="rightnav">
-						<li><a href="home.html">HOME<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">Home1</a></li>
-								<li><a href="">Home2</a></li>
-								<li><a href="">HOME3</a></li>
-							</ul>
+						<li><a href="#home">HOME</a>
 						</li>
-						<li><a href="hotels.html">HOTELS<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">Hotel1</a></li>
-								<li><a href="">Hotel2</a></li>
-								<li><a href="">Hotel3</a></li>
-							</ul>
+						<li><a href="#tour">SEA TOURS</a>
 						</li>
-						<li><a href="flights.html">FLIGHTS<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">flight1</a></li>
-								<li><a href="">flight2</a></li>
-								<li><a href="">flight3</a></li>
-							</ul>
+						<li><a href="#offers">SPECIAL OFFERS</a>
 						</li>
-						<li><a href="cars.html">CARS<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">cars1</a></li>
-								<li><a href="">cars2</a></li>
-								<li><a href="">cars3</a></li>
-							</ul>
+						<li><a href="#popular">POPULAR COUNTRIES</a>
 						</li>
-						<li><a href="cruises.html">CRUISES<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">cruises1</a></li>
-								<li><a href="">cruises2</a></li>
-								<li><a href="">cruises3</a></li>
-							</ul>
-						</li>
-						<li><a href="#tour">TOUR<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">tour1</a></li>
-								<li><a href="">tour2</a></li>
-								<li><a href="">tour3</a></li>
-							</ul>
-						</li>
-						<li><a href="#offers">OFFERS<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">pages1</a></li>
-								<li><a href="">pages2</a></li>
-								<li><a href="">pages3</a></li>
-							</ul>
-						</li>
-						<li><a href="#popular">POPULAR<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">shortcodes1</a></li>
-								<li><a href="">shortcodes2</a></li>
-								<li><a href="">shortcodes3</a></li>
-							</ul>
-						</li>
-						<li><a href="#contact">CONTACT<i class="fa fa-chevron-down"></i></a>
-							<ul class="sub-menu">
-								<li><a href="">bonus1</a></li>
-								<li><a href="">bonus2</a></li>
-								<li><a href="">bonus3</a></li>
-							</ul>
+						<li><a href="#contact">CONTACT</a>
 						</li>
 					</ul> <!-- End of nav1 ul -->	
 				</nav> 
@@ -93,7 +40,7 @@
 			<!-- start of Header-title -->
 			<div class="header-title">
 				<h3>
-					London
+					ITALY
 					<img src="assets/cloud.png" alt="">
 					+30C
 				</h3>
@@ -102,8 +49,10 @@
 				</h1>
 				<h4>Explore Beautiful Locations in Europe</h4>
 				<button>
-					<img src="assets/marker.png" alt="">  
-					VIEW OUR TOURS  
+					<a href="#tour">
+						<img src="assets/marker.png" alt="">  
+						VIEW OUR TOURS  
+					</a>	
 				</button>
 			</div>
 			<!-- End of Header-Title
@@ -147,8 +96,10 @@
 				</div>
 				<div>
 					<button>
-						<img src="assets/search.png" alt="">  
-						SEARCH NOW
+						<a href="#tour">
+							<img src="assets/search.png" alt="">  
+							SEARCH NOW
+						</a>
 					</button>
 				</div>
 			</div> <!-- end of inner-wrapper -->
@@ -408,7 +359,7 @@
 	</section> 
 	<!-- End of Special Offers
 	Start of Most Popular -->
-	<section class="most-popular">
+	<section class="most-popular" id="popular">
 		<div class="inner-wrapper">
 			<!-- Start of Section Title -->
 			<div class="heading">
@@ -584,13 +535,6 @@
 							<li><a href="">Turkey</a></li>
 							<li><a href="">India</a></li>
 						</ul>
-						<ul class="pop-right">
-							<li><a href="">France</a></li>
-							<li><a href="">Spain</a></li>
-							<li><a href="">Ukraine</a></li>
-							<li><a href="">Turkey</a></li>
-							<li><a href="">India</a></li>
-						</ul>
 					</div>
 				</div>
 				<div class="footer-follow follow-wrapper footer-title">
@@ -632,13 +576,13 @@
 	</footer><!-- End of Footer -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>
-		$(function() {
+// 		$(function() {
 
-	// jQuery Goes here!
-	$('.fa-bars').on('click', function(){
-		$('ul.rightnav').addClass('visible');
-	});
-});
+// 	// jQuery Goes here!
+// 	$('.fa-bars').on('click', function(){
+// 		$('ul.rightnav').addClass('visible');
+// 	});
+// });
 	</script>
 
 </body>

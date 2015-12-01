@@ -24,7 +24,6 @@ html{
 
 body{
 	@include fontSize(12);
-	max-width: 1280px;
 	text-align:center;
 }
 
@@ -64,7 +63,6 @@ p{
 
 button {
 	background: $teal;
-	// border: 1px solid  $teal;
 	color:white;
 	border-radius: 10px;
 	color: #ffffff;
@@ -73,11 +71,15 @@ button {
 	text-decoration: none;
 	border:none;
 	display:flex;
+	transition: 1s;
   	img{
   		width:13%;
   	}
   	p{
   		width:20%;
+  	}
+  	a{
+  		text-decoration: none;
   	}
 }
 
@@ -101,6 +103,7 @@ header{
 		padding: 20px 45px;
 		font-size: 1.2rem;
 		position:relative;
+		
 		img{
 			position:absolute;
 			left: 6%;
@@ -108,6 +111,8 @@ header{
 		}
 	}
 }
+
+
 // Inner-wrapper for entire body
 .inner-wrapper{
 	max-width:1080px;
@@ -156,22 +161,25 @@ header{
 		padding: 9px;
 		text-decoration: none;
 		position: relative;
-
-		&:hover {
-			background: rgba(0,0,0, 0.5);
-			.sub-menu{
-				display: block;
-				padding-left: 0px;
-				margin-left: -15px;
-				margin-top:15px;
-			}
-		}
+		font-size: 1.4rem;
+		// &:hover {
+		// 	color: rgba(0,0,0, 0.5);
+		// 	.sub-menu{
+		// 		display: block;
+		// 		padding-left: 0px;
+		// 		margin-left: -15px;
+		// 		margin-top:15px;
+		// 	}
+		// }
 	}
 	a{
 		text-decoration: none;
 		color:white;
 	}
 }
+.rightnav a:hover{
+			color:rgba(0,0,0, 0.5);
+		}
 
 	.sub-menu {
 		display: none;
@@ -213,8 +221,7 @@ nav .fa .fa-bars{
 .header-title{
 	max-width: 53vw;
 	margin: 0 auto;
-	padding-bottom:120px;
-	padding-top: 130px;
+	padding:8%;
 	button{
 	    	margin:0 auto;
 	}
@@ -227,7 +234,9 @@ nav .fa .fa-bars{
     font-weight: 600;
 
 }
-
+.bottom-header h4:hover{
+	color: rgba(0,0,0, 0.5);
+}
 .bottom-header {
 	background: rgba(0, 0, 0, 0.5);
 	width:100%;
@@ -269,7 +278,7 @@ nav .fa .fa-bars{
 }
 
 .sea-tours h2, .special-offers h2, .most-popular h2{
-	padding-top:70px;
+	padding-top:5%;
 }
 	p{
 	color: #c2c2c2;
@@ -286,7 +295,48 @@ nav .fa .fa-bars{
 .tours-box{
 	flex: 1 0 calc(33.33% - 15px);
  	margin:7px;
+  position: relative;
+  transition: background-color 1s;
 }
+.tours-box:hover {
+  background-color: rgba(0,0,0,.5);
+}
+.tours-box:before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: inherit;
+  content: ' ';
+}
+
+.offers-box{
+  position: relative;
+  transition: background-color 1s;
+}
+.offers-box:hover {
+  background-color: rgba(0,0,0,.5);
+}
+.offers-box:before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: inherit;
+  content: ' ';
+}
+
+.popular-box{
+	position: relative;
+  	transition: background-color 1s;
+}
+.popular-box:hover {
+  background-color: rgba(0,0,0,.5);
+}
+.popular-box:before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: inherit;
+  content: ' ';
+}
+
+
 .tour-location{
 	padding:40px;
 }
@@ -299,7 +349,7 @@ nav .fa .fa-bars{
 	padding-left:10px;
 }
 .heading{
-	padding-bottom: 60px;
+	padding-bottom: 5%;
 }
 
 .bolivia{
@@ -343,16 +393,16 @@ nav .fa .fa-bars{
 .banner{
 	background: url(assets/banner.jpg) no-repeat;
 	background-size: cover;
-	padding: 30px 0px;
+	padding:3%;
 	h3{
-		padding-top: 50px;
+		padding-top: 5%;
 	}
 	h2{
 		color:white;
 	}
 	p{
 		color:white;
-		padding-bottom: 50px
+		padding-bottom: 5%;
 	}
 }
 
@@ -384,10 +434,9 @@ nav .fa .fa-bars{
 	text-align: left;
     padding-left: 30px;
     padding-top: 30px;
-    padding-bottom: 40px;
-    margin-bottom: 3px;
+    padding-bottom: 5%;
+    margin-bottom: 5px;
     margin-right: 12px;
-    height:61vh;
     h3{
     	font-size: 2.5rem;
 	    font-family: 'Roboto Condensed', sans-serif;
@@ -436,6 +485,7 @@ nav .fa .fa-bars{
     margin-bottom:3px;
 	margin-right: 12px;
 	text-align: left;
+	padding-bottom: 6%;
 	.pop-heading{
 		padding:30px;
 	}
@@ -711,6 +761,9 @@ footer ul li a{
 	.footer-title h4{
 		margin-bottom: 50px
 	}
+	a{
+		text-decoration: none;
+	}
 }
 
 footer .email-wrapper {
@@ -780,6 +833,9 @@ footer input[type=submit]:hover {
 		padding:13px 0 0 0;
 		text-transform: uppercase;
 	}
+	a{
+		text-decoration: none;
+	}
 	h5{
 		color: white;
 	    margin: 0;
@@ -811,7 +867,7 @@ footer input[type=submit]:hover {
 	    padding-bottom: 40px;
 	    margin-bottom: 3px;
 	    margin-right: 12px;
-	    height:51vh;
+	    // height:51vh;
 	}
 	.offers-deal{
 		display:none;
@@ -822,14 +878,13 @@ footer input[type=submit]:hover {
 		display:none;
 	}
 	.tours-box {
-	    width: 50vh;
+	    // width: 50vh;
 	    margin: 0 auto;
 	}
 	.tours-box{
 		flex: 1 0 49%;
 		margin: 3px;
-    	width: 40vh;
-    	height: 50vh;
+    	padding:5%;
 	}
 	.popular-top-section, .popular-bottom-section{
 		flex-direction:column;
@@ -841,11 +896,10 @@ footer input[type=submit]:hover {
 		font-size: 1.5rem;
 	}
 	.popular-box{
-    padding: 54px 30px 5px 0px;
+    // padding: 54px 30px 5px 0px;
     margin-bottom: 3px;
     margin-right: 12px;
     text-align: left;
-	height: 52vh;
 	}
 	.footer-follow{
 		width: 25%;
@@ -860,8 +914,6 @@ footer input[type=submit]:hover {
 	.tours-box {
 	    flex: 1 0 40%;
 	    margin: 3px;
-	    width: 30vh;
-	    height: 40vh;
 	}
 	.fa-bars{
 		display:block;
@@ -875,10 +927,9 @@ footer input[type=submit]:hover {
 	.offers-box {
 	    text-align: left;
 	    padding-left: 30px;
-	    padding-top: 30px;
-	    width: 49vh;
-	    height: 61vh;
-	    margin: 0 auto;
+	    padding:10%;
+	    padding-top: 15%;
+    	padding-bottom: 79%;
 	}
 	ul.rightnav{
 		display:none !important;
@@ -952,8 +1003,6 @@ footer input[type=submit]:hover {
 	.tours-box {
 	    flex: 1 0 80%;
 	    margin: 10px;
-	    width: 30vh;
-	    height: 40vh;
 	}
 
 	.tours-gallery-top, .tours-gallery-bottom, .offers-gallery, .popular-gallery-top, .popular-gallery-bottom, .popular-bottom-section, .italy, .footer-logo, .footer-popular, .footer-follow, .susbscribe, footer .inner-wrapper {
@@ -967,14 +1016,13 @@ footer input[type=submit]:hover {
 	}
 
 	.popular-box {
-	    width: 80vw;
-	    height: 43vh;
+	    width:100%;
 	    margin: 10px;
 	    color: white;
-	    padding: 10px 20px;
 	    display: flex;
 	    flex-wrap: wrap;
 	    flex-direction: row;
+	    padding-bottom: 55%;
 	}
 
 	.italy, .france{
